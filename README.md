@@ -6,6 +6,8 @@ retrieves the user profile for each member and renders a card in a responsive
 
 [![NPM](https://img.shields.io/npm/v/github-org-cards.svg)](https://www.npmjs.com/package/github-org-cards) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+![github-org-cards](github-org-cards.png)
+
 ## Install
 
 ```bash

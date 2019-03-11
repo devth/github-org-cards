@@ -98,6 +98,18 @@ export default class App extends Component {
         </div>
 
         <GitHubOrg key={org} columns={columns} org={org} />
+
+
+        <footer className="footer">
+          <div className="content has-text-centered">
+            <p>
+              <strong>github-org-cards</strong> by <a
+                href="https://github.com/devth">devth</a>.
+              View on <a href="https://github.com/devth/github-org-cards">GitHub</a>.
+            </p>
+          </div>
+        </footer>
+
       </div>
     )
   }
