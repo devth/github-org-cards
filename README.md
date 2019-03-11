@@ -32,6 +32,18 @@ class Example extends Component {
 }
 ```
 
+## Publish NPM
+
+```
+yarn publish --minor
+```
+
+## Deploy to GitHUb pages
+
+```
+yarn deploy
+```
+
 ## License
 
 MIT © [devth](https://github.com/devth)
