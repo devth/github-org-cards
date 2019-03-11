@@ -1,0 +1,21 @@
+{
+  "name": "github-org-cards-example",
+  "homepage": "https://devth.github.io/github-org-cards",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "github-org-cards": "link:..",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
