@@ -8,6 +8,8 @@ retrieves the user profile for each member and renders a card in a responsive
 
 ![github-org-cards](github-org-cards.png)
 
+[View the demo](https://devth.com/github-org-cards/)
+
 ## Install
 
 ```bash
@@ -26,7 +28,7 @@ import {GitHubOrg} from 'github-org-cards'
 class Example extends Component {
   render () {
     return (
-      <GitHubOrg columns={2} org='reactjs' />
+      <GitHubOrg columns={2} org='github' />
     )
   }
 }
