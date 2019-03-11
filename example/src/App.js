@@ -56,9 +56,13 @@ export default class App extends Component {
           of columns per card.
         </p>
 
-        <p>
+        <p style={{marginBottom: 16}}>
           Try the demo below by putting your own GitHub Org in and playing with
-          the columns!
+          the columns!&nbsp;
+          <strong>
+            Be careful of large orgs or your GitHub API quota can be
+            quickly surpassed.
+          </strong>
         </p>
 
         <div className="columns">

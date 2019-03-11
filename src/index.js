@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import shuffle from 'lodash/shuffle';
+import isArray from 'lodash/isArray';
 import PropTypes from 'prop-types';
 import styles from './styles.css';
 import bulma from './bulma.css';
@@ -27,15 +28,23 @@ export class GitHubOrg extends Component {
         return res.json();
       })
       .then(body => {
-        console.log('org response', JSON.stringify(body));
-        this.setState({orgMembers: shuffle(body)});
+        // console.log('org response', JSON.stringify(body));
+        if (isArray(body)) {
+          console.log(`found ${body.length} members`);
+          this.setState({orgMembers: shuffle(body)});
+        } else {
+          const {message} = body;
+          if (message) {
+            this.setState({message});
+          }
+        }
       }).catch(err => {
         console.log('error fetching org', err);
       });
   }
 
   render() {
-    const { status, orgMembers } = this.state;
+    const { message, status, orgMembers } = this.state;
     const { columns, org } = this.props;
 
     // wait for response for initial render
@@ -43,11 +52,6 @@ export class GitHubOrg extends Component {
 
     return (
       <div className={styles.org}>
-        {status === 404
-          ? <div className={`${bulma.notification} ${bulma['is-danger']}`}>
-              Could not find a GitHub org {org}
-            </div>
-          : null}
         {status === 200
           ? <div className={`${bulma.columns} ${bulma['is-multiline']}`}>
               {orgMembers && orgMembers.map(user =>
@@ -55,9 +59,15 @@ export class GitHubOrg extends Component {
               )}
             </div>
           : null}
-        {status !== 200 && status !== 404
+        {status !== 200
           ? <div className={`${bulma.notification} ${bulma['is-danger']}`}>
-              Unknown status ${status}
+              <p className={`${bulma.title}`}>
+                {status}
+              </p>
+              <p className={`${bulma.subtitle}`}>
+                {org}
+              </p>
+              <p>{message}</p>
             </div>
           : null}
       </div>
