@@ -8,7 +8,8 @@ retrieves the user profile for each member and renders a card in a responsive
 
 ![github-org-cards](github-org-cards.png)
 
-[View the demo](https://devth.com/github-org-cards/)
+- [View the demo](https://devth.com/github-org-cards/)
+- View usage in the wild on [Yetibot Community](https://yetibot.com/community).
 
 ## Install
 
