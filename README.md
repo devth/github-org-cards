@@ -22,16 +22,14 @@ npm install --save github-org-cards
 See [example/src/App.js](example/src/App.js) for a full example.
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import {GitHubOrg} from 'github-org-cards'
+import {GitHubOrgCards} from 'github-org-cards'
 
-class Example extends Component {
-  render () {
-    return (
-      <GitHubOrg columns={2} org='github' />
-    )
-  }
+const Example = () => {
+  return (
+    <GitHubOrgCards columns={2} org='github' />
+  );
 }
 ```
 
