@@ -39,6 +39,13 @@ const App = () => {
               />
             </div>
           </div>
+          Examples:
+          {' '}
+          <button class="button is-small is-outlined is-primary" onClick={() => setOrg('github')}>github</button>
+          {' '}
+          <button class="button is-small is-outlined is-primary" onClick={() => setOrg('reactjs')}>reactjs</button>
+          {' '}
+          <button class="button is-small is-outlined is-primary" onClick={() => setOrg('yetibot')}>yetibot</button>
         </div>
 
         <div className="column is-3">

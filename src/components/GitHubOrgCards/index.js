@@ -120,78 +120,9 @@ export const ProfileCard = ({user: {login}, columns}) => {
   } else {
     return <div></div>;
   }
-
-
 };
 
 ProfileCard.propTypes = {
   user: PropTypes.object,
   columns: PropTypes.number
 }
-
-
-// export class ProfileCard extends Component {
-//   static propTypes = {
-//     user: PropTypes.object,
-//     columns: PropTypes.number
-//   }
-//
-//   state = {
-//     user: undefined
-//   }
-//
-//   componentDidMount() {
-//     const {login} = this.props.user;
-//     fetch(`${baseUrl}/users/${login}`)
-//       .then(res => res.json())
-//       .then(user => this.setState({user}))
-//       .catch(err => console.error('error fetching user', err));
-//   }
-//
-//   render() {
-//     const {user} = this.state;
-//     const {columns} = this.props;
-//     const columnClass = `is-${columns}`;
-//     if (user) {
-//       return (
-//         <div className={`${bulma.column} ${bulma[columnClass]}`}>
-//           <div className={bulma.card}>
-//             <div className={bulma['card-image']}>
-//               <figure className={`${bulma.image} ${bulma['is-4by4']}`}>
-//                 <img src={user.avatar_url} alt={user.name} />
-//               </figure>
-//             </div>
-//             <header className={bulma['card-header']}>
-//               <p className={bulma['card-header-title']}>
-//                 <a href={user.html_url}>@{user.login}</a>
-//               </p>
-//             </header>
-//             <div className={bulma['card-content']}>
-//               <div className={bulma.content}>
-//                 <p className={`${bulma.title}`}><strong>{user.name}</strong></p>
-//                 {user ? user.bio : null}
-//               </div>
-//             </div>
-//             <footer className={bulma['card-footer']}>
-//               {user.company
-//                 ? <div className={bulma['card-footer-item']}>{user.company}</div>
-//                 : null}
-//               {user.location
-//                 ? <div className={bulma['card-footer-item']}>{user.location}</div>
-//                 : null}
-//             </footer>
-//             <footer className={bulma['card-footer']}>
-//               {user.blog
-//                 ? <div className={bulma['card-footer-item']}>
-//                     <a href={user.blog}>{user.blog}</a>
-//                   </div>
-//               : null}
-//             </footer>
-//           </div>
-//         </div>
-//       );
-//     } else {
-//       return <div></div>;
-//     }
-//   }
-// }
