@@ -3,11 +3,11 @@ import shuffle from 'lodash/shuffle';
 import isArray from 'lodash/isArray';
 import PropTypes from 'prop-types';
 
-import styles from './styles.scss';
+import styles from './styles.sass';
 
 const baseUrl = 'https://api.github.com';
 
-export const GitHubOrgCards = ({org, columns, shouldShuffle}) => {
+const GitHubOrgCards = ({org, columns, shouldShuffle}) => {
   const [orgMembers, setOrgMembers] = useState([]);
   const [status, setStatus] = useState();
   const [message, setMessage] = useState();
@@ -65,6 +65,7 @@ GitHubOrgCards.propTypes = {
   columns: PropTypes.number
 };
 
+export default GitHubOrgCards;
 
 // user prop is not fully hydrated
 // user state represents the hydrated version
@@ -107,13 +108,13 @@ export const ProfileCard = ({user: {login}, columns}) => {
               ? <div className='card-footer-item'>{user.location}</div>
               : null}
           </footer>
-          <footer className='card-footer'>
-            {user.blog
-              ? <div className='card-footer-item'>
+          {user.blog
+            ? <footer className='card-footer'>
+                <div className='card-footer-item'>
                   <a href={user.blog}>{user.blog}</a>
                 </div>
+              </footer>
             : null}
-          </footer>
         </div>
       </div>
     );

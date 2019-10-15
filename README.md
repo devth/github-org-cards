@@ -11,6 +11,24 @@ retrieves the user profile for each member and renders a card in a responsive
 - [View the demo](https://devth.com/github-org-cards/)
 - View usage in the wild on [Yetibot Community](https://yetibot.com/community).
 
+## bit
+
+```
+bit build
+bit status
+bit list
+
+bit add src/components/GitHubOrgCards
+
+version=0.0.3
+bit tag --all $version
+
+bit show git-hub-org-cards
+
+bit export devth.github
+```
+
+
 ## Install
 
 ```bash

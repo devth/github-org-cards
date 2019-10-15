@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import {GitHubOrgCards} from './components/GitHubOrgCards';
+import GitHubOrgCards from './components/GitHubOrgCards';
 
 const App = () => {
   const [org, setOrg] = useState('yetibot');
@@ -82,7 +82,7 @@ const App = () => {
 
       <GitHubOrgCards org={org} columns={columns} shouldShuffle={shouldShuffle} />
 
-      <footer className="footer">
+      <footer className="app-footer footer">
         <div className="content has-text-centered">
           <p>
             <strong>github-org-cards</strong> by <a
