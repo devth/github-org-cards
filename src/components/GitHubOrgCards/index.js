@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import shuffle from 'lodash/shuffle';
 import isArray from 'lodash/isArray';
 import PropTypes from 'prop-types';
-
-import styles from './styles.sass';
+import styles from './styles.scss';
 
 const baseUrl = 'https://api.github.com';
 
