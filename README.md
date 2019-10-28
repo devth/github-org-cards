@@ -1,17 +1,51 @@
-# github-org-cards
+# @bit/devth.github.git-hub-org-cards
 
-Obtains members of a GitHub Org using the GitHub Orgs API, shuffles them,
-retrieves the user profile for each member and renders a card in a responsive
-12-column-based layout with an optionally-provided number of columns per card.
+Obtains members of a GitHub Org using the GitHub Orgs API, optionally shuffles
+them, retrieves the user profile for each member and renders a card in a
+responsive 12-column-based layout with an optionally-provided number of columns
+per card.
 
-[![NPM](https://img.shields.io/npm/v/github-org-cards.svg)](https://www.npmjs.com/package/github-org-cards) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![bit](https://img.shields.io/badge/%40bit%2Fdevth.github.git--hub--org--cards-bit.dev-blue)](https://bit.dev/devth/github/git-hub-org-cards)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ![github-org-cards](github-org-cards.png)
 
-- [View the demo](https://devth.com/github-org-cards/)
 - View usage in the wild on [Yetibot Community](https://yetibot.com/community).
 
-## bit
+## Install
+
+Requires [adding Bit as a scoped
+registry](https://docs.bit.dev/docs/installing-components.html):
+
+```bash
+npm config set '@bit:registry' https://node.bit.dev
+```
+
+Then:
+
+```bash
+yarn add @bit/devth.github.git-hub-org-cards
+```
+
+## Usage
+
+See [example/src/App.js](example/src/App.js) for a full example.
+
+```jsx
+import React from 'react'
+
+import {GitHubOrgCards} from 'github-org-cards'
+
+const Example = () => {
+  return (
+    <GitHubOrgCards columns={2} org='github' />
+  );
+}
+```
+
+
+
+## bit usage
 
 ```
 bit status
@@ -34,46 +68,12 @@ bit export devth.github
 yarn global add bit-bin
 ```
 
-## Install
-
-```bash
-npm install --save github-org-cards
-```
-
-## Usage
-
-See [example/src/App.js](example/src/App.js) for a full example.
-
-```jsx
-import React from 'react'
-
-import {GitHubOrgCards} from 'github-org-cards'
-
-const Example = () => {
-  return (
-    <GitHubOrgCards columns={2} org='github' />
-  );
-}
-```
-
-## Publish NPM
-
-```
-yarn publish --minor
-```
-
-## Deploy to GitHUb pages
-
-```
-yarn deploy
-```
-
 ## License
 
 MIT © [devth](https://github.com/devth)
 
 This project was bootstrapped with [Create React
-App](https://github.com/facebook/create-react-app).
+App](https://github.com/facebook/create-react-app). Generated docs are below.
 
 ## Available Scripts
 
