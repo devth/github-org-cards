@@ -14,13 +14,13 @@ retrieves the user profile for each member and renders a card in a responsive
 ## bit
 
 ```
-bit build
 bit status
 bit list
 
 bit add src/components/GitHubOrgCards
 
-version=0.0.3
+bit build
+version=0.0.5
 bit tag --all $version
 
 bit show git-hub-org-cards
@@ -28,6 +28,11 @@ bit show git-hub-org-cards
 bit export devth.github
 ```
 
+## Update or install bit
+
+```
+yarn global add bit
+```
 
 ## Install
 
