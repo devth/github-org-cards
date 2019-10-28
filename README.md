@@ -20,7 +20,7 @@ bit list
 bit add src/components/GitHubOrgCards
 
 bit build
-version=0.0.5
+version=0.0.6
 bit tag --all $version
 
 bit show git-hub-org-cards
@@ -31,7 +31,7 @@ bit export devth.github
 ## Update or install bit
 
 ```
-yarn global add bit
+yarn global add bit-bin
 ```
 
 ## Install
